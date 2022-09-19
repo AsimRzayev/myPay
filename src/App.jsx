@@ -1,9 +1,8 @@
 import React from "react";
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Main from "./modules/Main/Main";
 import { ROUTES } from "./routes";
-
 
 // function ProtectedRoute({hasUser,children}){
 // if(!hasUser){
@@ -17,8 +16,8 @@ import { ROUTES } from "./routes";
 function App() {
   return (
     <Routes>
-        {/* <Route path={ROUTES.MAIN} element={<ProtectedRoute hasUser={true}> <Main /></ProtectedRoute>} exact /> */}
-        <Route path={ROUTES.MAIN} element={<Main />} exact />
+      {/* <Route path={ROUTES.MAIN} element={<ProtectedRoute hasUser={true}> <Main /></ProtectedRoute>} exact /> */}
+      <Route path={ROUTES.MAIN} element={<Main />} exact />
     </Routes>
   );
 }
