@@ -1,7 +1,7 @@
 import { Text } from "@chakra-ui/react";
 import React from "react";
 
-function HeaderTitle() {
+function SectionHeading() {
   return (
     <Text
       width="86px"
@@ -30,4 +30,4 @@ function HeaderTitle() {
   );
 }
 
-export default HeaderTitle;
+export default SectionHeading;
