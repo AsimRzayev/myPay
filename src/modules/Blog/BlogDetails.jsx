@@ -1,7 +1,14 @@
 import { Image, Stack, Text } from "@chakra-ui/react";
 import React from "react";
+import { useParams } from "react-router-dom";
 
-function ItemDetails({ item }) {
+import { useItem } from "../../components/BlogProvider";
+
+function BlogDetails() {
+  const blogData = useItem();
+  const { id } = useParams();
+
+  const item = blogData.find((blog) => blog.id == id);
   const { image, title, desc } = item;
   return (
     <Stack
@@ -26,4 +33,4 @@ function ItemDetails({ item }) {
   );
 }
 
-export default ItemDetails;
+export default BlogDetails;

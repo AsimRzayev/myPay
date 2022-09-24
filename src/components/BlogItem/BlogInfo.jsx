@@ -1,15 +1,14 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Flex, Img, Text } from "@chakra-ui/react";
 import React from "react";
 
 function BlogInfo({ item }) {
   const { image, title, desc } = item;
   return (
     <Flex flexDirection="column" gap="8px">
-      <Image
+      <Img
         src={image}
         alt="items"
-        width="288px"
-        height="156px"
+        width="full"
         borderRadius="4px 4px 0px 0px"
       />
       <Text
