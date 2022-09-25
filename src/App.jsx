@@ -2,6 +2,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 
+import BlogProvider from "./components/BlogProvider";
+import BlogDetails from "./modules/Blog/BlogDetails";
+import BlogList from "./modules/Blog/BlogList";
 import { About } from "./modules/Main/Information/About";
 import { Apii } from "./modules/Main/Information/Apii";
 import { Contact } from "./modules/Main/Information/Contact";
@@ -21,9 +24,10 @@ import { ROUTES } from "./routes";
 
 function App() {
   return (
-    <>
+    <BlogProvider>
       <Routes>
         {/* <Route path={ROUTES.MAIN} element={<ProtectedRoute hasUser={true}> <Main /></ProtectedRoute>} exact /> */}
+        <Route path={ROUTES.MAIN} element={<Main />} exact />
         <Route path={ROUTES.MAIN} element={<Main />} exact />
         <Route path={ROUTES.ABOUT} element={<About />} exact />
         <Route path={ROUTES.APII} element={<Apii />} exact />
@@ -31,8 +35,10 @@ function App() {
         <Route path={ROUTES.CUSTOMERS} element={<Customers />} exact />
         <Route path={ROUTES.NEWS} element={<News />} exact />
         <Route path={ROUTES.SERVICES} element={<Service />} exact />
+        <Route path={ROUTES.BLOG.LIST} element={<BlogList />} exact />
+        <Route path={ROUTES.BLOG.DETAILS} element={<BlogDetails />} exact />
       </Routes>
-    </>
+    </BlogProvider>
   );
 }
 

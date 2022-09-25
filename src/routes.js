@@ -11,4 +11,8 @@ export const ROUTES = {
   CUSTOMERS: "/customers",
   NEWS: "/news",
   SERVICES: "/services",
+  BLOG: {
+    LIST: "/blog/list",
+    DETAILS: "/blog/details/:id",
+  },
 };
