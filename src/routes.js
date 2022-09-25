@@ -5,4 +5,10 @@ export const ROUTES = {
     SIGN_UP: "/auth/signup",
   },
   PAYMENT: "/payment",
+  ABOUT: "/about",
+  APII: "/apii",
+  CONTACT: "/contact",
+  CUSTOMERS: "/customers",
+  NEWS: "/news",
+  SERVICES: "/services",
 };
