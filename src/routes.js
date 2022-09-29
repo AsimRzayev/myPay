@@ -6,7 +6,7 @@ export const ROUTES = {
   },
   PAYMENT: "/payment",
   ABOUT: "/about",
-  APII: "/apii",
+  API: "/api",
   CONTACT: "/contact",
   CUSTOMERS: "/customers",
   NEWS: "/news",
