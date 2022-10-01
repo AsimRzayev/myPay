@@ -1,16 +1,17 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import React from "react";
 import { generatePath } from "react-router-dom";
 
 import BlogItem from "../../components/BlogItem/BlogItem";
 import { useItem } from "../../components/BlogProvider";
+import PageContainer from "../../components/Container";
 import SectionHeading from "../../components/SectionHeading";
 import { ROUTES } from "../../routes";
 
 function BlogList() {
   const itemData = useItem();
   return (
-    <Box margin="80px 96px">
+    <PageContainer py={4}>
       <Flex justifyContent={"space-between"} height="56px" alignItems={"end"}>
         <SectionHeading />
       </Flex>
@@ -23,7 +24,7 @@ function BlogList() {
           />
         ))}
       </Flex>
-    </Box>
+    </PageContainer>
   );
 }
 

@@ -7,7 +7,7 @@ export const ROUTES = {
   PAYMENT: "/payment",
   MOBILE_OPERATOR: "/payment/mobileOperator",
   ABOUT: "/about",
-  APII: "/apii",
+  API: "/api",
   CONTACT: "/contact",
   CUSTOMERS: "/customers",
   NEWS: "/news",

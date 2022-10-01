@@ -1,16 +1,18 @@
 //
-import { Box, Container, Flex } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import React from "react";
 import { Link as RouterLink } from "react-router-dom";
 
-import Logo from "../Footer/images/ClickPayLogo.svg";
-import Fb from "../Footer/images/FbLogo.svg";
-import Tweet from "../Footer/images/TweetLogo.svg";
+import Logo from "../assets/logo/ClickPayLogo.svg";
+import Fb from "../assets/logo/FbLogo.svg";
+import Tweet from "../assets/logo/TweetLogo.svg";
+import { ROUTES } from "../routes";
+import PageContainer from "./Container";
 
 export default function Footer() {
   return (
-    <Flex bg="#081125" color="#ACB3B8" height="193px" alignItems="center">
-      <Container maxW="95%">
+    <Flex w="full" bg="#081125" color="#ACB3B8" py="40px" alignItems="center">
+      <PageContainer>
         <Flex justifyContent="space-between" textAlign="center">
           <Flex mb={4}>
             <img src={Logo} alt="ClickPay" />
@@ -18,7 +20,7 @@ export default function Footer() {
           </Flex>
           <Flex gap={7} mr={3} mt={4} fontSize="16px">
             <RouterLink
-              to="/about"
+              to={ROUTES.ABOUT}
               color="black"
               _hover={{
                 color: "white",
@@ -52,7 +54,7 @@ export default function Footer() {
             <img src={Tweet} alt="Tweet" />
           </Flex>
         </Flex>
-      </Container>
+      </PageContainer>
     </Flex>
   );
 }
