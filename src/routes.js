@@ -5,6 +5,7 @@ export const ROUTES = {
     SIGN_UP: "/auth/signup",
   },
   PAYMENT: "/payment",
+  MOBILE_OPERATOR: "/payment/mobileOperator",
   ABOUT: "/about",
   API: "/api",
   CONTACT: "/contact",
