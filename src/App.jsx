@@ -12,6 +12,8 @@ import { Customers } from "./modules/Main/Information/Customers";
 import { News } from "./modules/Main/Information/News";
 import { Service } from "./modules/Main/Information/Service";
 import Main from "./modules/Main/Main";
+import MobileOperator from "./modules/Payment/MobileOperators/MobileOperator";
+import Payment from "./modules/Payment/Payment";
 import { ROUTES } from "./routes";
 // function ProtectedRoute({hasUser,children}){
 // if(!hasUser){
@@ -37,6 +39,8 @@ function App() {
         <Route path={ROUTES.SERVICES} element={<Service />} exact />
         <Route path={ROUTES.BLOG.LIST} element={<BlogList />} exact />
         <Route path={ROUTES.BLOG.DETAILS} element={<BlogDetails />} exact />
+        <Route path={ROUTES.PAYMENT} element={<Payment />} exact />
+        <Route path={ROUTES.PAYMENT} element={<MobileOperator />} exact />
       </Routes>
     </BlogProvider>
   );
