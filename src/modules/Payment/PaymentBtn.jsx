@@ -1,13 +1,13 @@
 import "../../index.css";
 
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, Img } from "@chakra-ui/react";
 import React from "react";
 
 export default function PaymentBtn(props) {
   return (
     <Button
-      w="200px"
-      h="160px"
+      w="220px"
+      h="180px"
       bg="#F3F5F8"
       border="1px solid #fff"
       columnGap="100px"
@@ -26,16 +26,23 @@ export default function PaymentBtn(props) {
         bottom: "-13px",
         position: "absolute",
       }}
-      to={props.url}
+      _hover={{
+        boxShadow: "0px 4px 37px rgba(29, 78, 216, 0.1)",
+        bg: "#F9FAFB",
+        border: "1px solid #ffff",
+      }}
+      onClick={props.url}
     >
       <Flex
-        w="64px"
-        h="64px"
+        w="70px"
+        h="70px"
         bg={props.iconBg}
         borderRadius="16px"
         alignItems="center"
         justifyContent="center"
-      ></Flex>
+      >
+        <Img src={props.icon} alt="icon" />
+      </Flex>
       {props.heading}
     </Button>
   );

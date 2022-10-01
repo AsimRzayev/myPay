@@ -7,12 +7,12 @@ import PaymentBtn from "./PaymentBtn";
 export default function PaymentList() {
   return (
     <Flex
-      w="1320px"
-      h={"345px"}
+      w="100%"
+      h={"500px"}
       position={"absolute"}
-      bottom="80px"
+      bottom="0px"
       justifyContent="start"
-      columnGap="24px"
+      columnGap="38px"
       rowGap="25px"
       alignItems="center"
       flexWrap="wrap"
