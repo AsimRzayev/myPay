@@ -5,7 +5,6 @@ import funImg from "../../assets/paymentImages/game.png";
 import InternetImg from "../../assets/paymentImages/internet.png";
 import kommunImg from "../../assets/paymentImages/kommunal.png";
 import mobilOpImg from "../../assets/paymentImages/mobilOp.png";
-import mobilOpHover from "../../assets/paymentImages/mobOpHover.png";
 import phoneImg from "../../assets/paymentImages/phone.png";
 import TvImg from "../../assets/paymentImages/tv.png";
 
@@ -13,7 +12,6 @@ export const PAYMENT_BUTTONS = [
   {
     id: 1,
     icon: mobilOpImg,
-    iconHover: mobilOpHover,
     heading: "Mobil Operatorlar",
     url: "../Payment/MobileOperators/MobileOperator.jsx",
     iconBg: "rgba(55, 191, 254, 0.1)",

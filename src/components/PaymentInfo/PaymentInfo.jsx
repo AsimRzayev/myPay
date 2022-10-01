@@ -7,16 +7,15 @@ import PaymentInfoCards from "./PaymentInfoCards/PaymentInfoCards";
 export default function PaymentInfo() {
   return (
     <Flex
-      w="1512px"
+      w="full"
       h="284px"
       flex="none"
       order="1"
-      flecGrow="0"
       alignItems="center"
       justifyContent="center"
-      m="10% auto"
+      py={6}
     >
-      <Img src={bgImage} />
+      <Img src={bgImage} width="full" />
       <PaymentInfoCards />
     </Flex>
   );
