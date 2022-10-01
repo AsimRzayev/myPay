@@ -21,7 +21,7 @@ const Payment = () => {
       w={{ base: "80%", md: "1920px" }}
       h={"990px"}
       mt="30px"
-      bg="#000"
+      bg="#F9FAFB"
       position="relative"
       alignItems="center"
       justifyContent="center"
@@ -29,13 +29,11 @@ const Payment = () => {
       <Flex
         w={{ base: "80%", md: "1512px" }}
         h={"677px"}
-        bg=" #F9FAFB"
-        border="1px solid"
+        bg="#F9FAFB"
         position="relative"
-        padding="80px 96px"
       >
         <Flex
-          w={{ base: "80%", md: "1318px" }}
+          w={{ base: "100%", md: "100%" }}
           h="140px"
           flexDirection="column"
           gap="32px"
@@ -66,7 +64,7 @@ const Payment = () => {
             Ödəniş
           </Heading>
           <Stack
-            width={{ base: "70%", md: "1315px" }}
+            width="100%"
             h={"48px"}
             bottom="0"
             position="relative"
@@ -77,7 +75,7 @@ const Payment = () => {
               height: "20px",
               backgroundColor: "#E8ECF1",
               position: "absolute",
-              zIndex: "10",
+              zIndex: "3",
               bottom: "14px",
               left: "52px",
             }}
