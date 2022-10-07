@@ -14,6 +14,10 @@ import { Customers } from "./modules/Main/Information/Customers";
 import { News } from "./modules/Main/Information/News";
 import { Service } from "./modules/Main/Information/Service";
 import Main from "./modules/Main/Main";
+import SignInEmail from "./modules/SignIn/SignInEmail";
+import SignInMobile from "./modules/SignIn/SignInMobile";
+import SignUpEmail from "./modules/SignUp/SignUpEmail";
+import SignUpMobile from "./modules/SignUp/SignUpMobile";
 import { ROUTES } from "./routes";
 // function ProtectedRoute({hasUser,children}){
 // if(!hasUser){
@@ -41,6 +45,26 @@ function App() {
           <Route path={ROUTES.SERVICES} element={<Service />} exact />
           <Route path={ROUTES.BLOG.LIST} element={<BlogList />} exact />
           <Route path={ROUTES.BLOG.DETAILS} element={<BlogDetails />} exact />
+          <Route
+            path={ROUTES.AUTH.SIGN_IN.EMAIL}
+            element={<SignInEmail />}
+            exact
+          />
+          <Route
+            path={ROUTES.AUTH.SIGN_IN.MOBILE}
+            element={<SignInMobile />}
+            exact
+          />
+          <Route
+            path={ROUTES.AUTH.SIGN_UP.EMAIL}
+            element={<SignUpEmail />}
+            exact
+          />
+          <Route
+            path={ROUTES.AUTH.SIGN_UP.MOBILE}
+            element={<SignUpMobile />}
+            exact
+          />
         </Routes>
       </BlogProvider>
       <Footer />
