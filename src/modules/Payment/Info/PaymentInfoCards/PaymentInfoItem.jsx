@@ -1,14 +1,12 @@
 import { Flex, Heading, Img, Text } from "@chakra-ui/react";
 import React from "react";
 
-import paymentsIcon from "../../../image/Group 9570.png";
-
-export default function SimplePayments() {
+export default function PaymentInfoItem({ image, header, desc }) {
   return (
     <Flex
       alignItems="flex-start"
-      flexWrap="wrap"
-      p="44px 4px 4px 28px"
+      flexWrap="Wrap"
+      p="44px 4px 46px 28px"
       gap="28px"
       w="330px"
       // h="284px"
@@ -23,12 +21,11 @@ export default function SimplePayments() {
         top: "44px",
       }}
     >
-      <Img src={paymentsIcon} mr="50px" />
+      <Img src={image} />
       <Heading
         as="h1"
         w="265px"
         h="32px"
-        fontFamily="SF Pro Display"
         fontStyle="normal"
         fontWeight="500"
         fontSize="20px"
@@ -38,10 +35,9 @@ export default function SimplePayments() {
         order="0"
         flexGrow="0"
       >
-        Ödənişlərinizi sadələşdirin
+        {header}
       </Heading>
       <Text
-        fontFamily="SF Pro Display"
         widths="273px"
         height="96px"
         fontStyle="normal"
@@ -51,11 +47,8 @@ export default function SimplePayments() {
         justifyContent="center"
         color="#586268"
         mt="8px"
-        order="0"
-        flexGrow="0"
       >
-        Voluptatibus nisi maxime quia voluptatem. Dolores cum libero dolorem
-        exercitationem o dolorem exercitatione
+        {desc}
       </Text>
     </Flex>
   );

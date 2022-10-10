@@ -7,15 +7,15 @@ import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 import BlogDetails from "./modules/Blog/BlogDetails";
 import BlogList from "./modules/Blog/BlogList";
-import { About } from "./modules/Main/Information/About";
-import { Apii } from "./modules/Main/Information/Apii";
-import { Contact } from "./modules/Main/Information/Contact";
-import { Customers } from "./modules/Main/Information/Customers";
-import { News } from "./modules/Main/Information/News";
+import About from "./modules/Main/Information/About";
+import Apii from "./modules/Main/Information/Apii";
+import Contact from "./modules/Main/Information/Contact";
+import Customers from "./modules/Main/Information/Customers";
+import News from "./modules/Main/Information/News";
 import { Service } from "./modules/Main/Information/Service";
 import Main from "./modules/Main/Main";
-import MobileOperator from "./modules/Payment/MobileOperators/MobileOperator";
 import Payment from "./modules/Payment/Payment";
+import PaymentForm from "./modules/Payment/PaymentForm";
 import { ROUTES } from "./routes";
 // function ProtectedRoute({hasUser,children}){
 // if(!hasUser){
@@ -33,7 +33,7 @@ function App() {
       <BlogProvider>
         <Routes>
           {/* <Route path={ROUTES.MAIN} element={<ProtectedRoute hasUser={true}> <Main /></ProtectedRoute>} exact /> */}
-          <Route path="" element={<Navigate to={ROUTES.MAIN} />} />
+          <Route path="" element={<Navigate to={ROUTES.MAIN} exact />} />
           <Route path={ROUTES.MAIN} element={<Main />} exact />
           <Route path={ROUTES.ABOUT} element={<About />} exact />
           <Route path={ROUTES.API} element={<Apii />} exact />
@@ -44,7 +44,7 @@ function App() {
           <Route path={ROUTES.BLOG.LIST} element={<BlogList />} exact />
           <Route path={ROUTES.BLOG.DETAILS} element={<BlogDetails />} exact />
           <Route path={ROUTES.PAYMENT} element={<Payment />} exact />
-          <Route path={ROUTES.PAYMENT} element={<MobileOperator />} exact />
+          <Route path={ROUTES.PAYMENTS_FORM} element={<PaymentForm />} exact />
         </Routes>
       </BlogProvider>
       <Footer />

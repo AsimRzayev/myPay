@@ -1,49 +1,37 @@
 import "../../index.css";
 
-import { Button, Flex, Img } from "@chakra-ui/react";
+import { Flex, Img } from "@chakra-ui/react";
 import React from "react";
+import { generatePath, Link } from "react-router-dom";
 
-export default function PaymentBtn(props) {
+import { ROUTES } from "../../routes";
+
+export default function PaymentBtn({ payment }) {
   return (
-    <Button
-      w="220px"
-      h="180px"
-      bg="#F3F5F8"
-      border="1px solid #fff"
-      columnGap="100px"
-      flexWrap="wrap"
-      fontStyle="normal"
-      fontWeight="400"
+    <Flex
+      as={Link}
+      to={generatePath(ROUTES.PAYMENTS_FORM, { type: payment.type })}
+      w="full"
+      h="full"
+      d="flex"
+      flexDirection="column"
+      rowGap={4}
       fontSize="20px"
       color="#586268"
-      p="10px 16px 15px"
-      position="relative"
-      _after={{
-        content: "''",
-        width: "112px",
-        height: "1px",
-        backgroundColor: " #44BC82",
-        bottom: "-13px",
-        position: "absolute",
-      }}
-      _hover={{
-        boxShadow: "0px 4px 37px rgba(29, 78, 216, 0.1)",
-        bg: "#F9FAFB",
-        border: "1px solid #ffff",
-      }}
-      onClick={props.url}
+      alignItems="center"
+      textAlign="center"
     >
       <Flex
-        w="70px"
-        h="70px"
-        bg={props.iconBg}
+        w="50%"
+        p={4}
+        bg={payment.iconBg}
         borderRadius="16px"
         alignItems="center"
         justifyContent="center"
       >
-        <Img src={props.icon} alt="icon" />
+        <Img src={payment.icon} alt="icon" />
       </Flex>
-      {props.heading}
-    </Button>
+      {payment.heading}
+    </Flex>
   );
 }

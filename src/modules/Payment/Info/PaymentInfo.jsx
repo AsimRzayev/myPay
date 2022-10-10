@@ -1,7 +1,7 @@
 import { Flex, Img } from "@chakra-ui/react";
 import React from "react";
 
-import bgImage from "./img/Group 9581.png";
+import bgImage from "../../../assets/blogImages/Group 9581.png";
 import PaymentInfoCards from "./PaymentInfoCards/PaymentInfoCards";
 
 export default function PaymentInfo() {
