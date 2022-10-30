@@ -17,7 +17,6 @@ module.exports = {
     "react/prop-types": "off",
     "react/display-name": "off",
     "react/no-children-prop": 0,
-    "no-console": 2,
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "import/newline-after-import": "error",

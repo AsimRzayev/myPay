@@ -2,7 +2,7 @@ import { Flex, Img, Text } from "@chakra-ui/react";
 import React from "react";
 
 function BlogInfo({ item }) {
-  const { image, title, desc } = item;
+  const { image, heading, desc } = item;
   return (
     <Flex flexDirection="column" gap="8px">
       <Img
@@ -18,7 +18,7 @@ function BlogInfo({ item }) {
         paddingTop="5px"
         color="#2E3131"
       >
-        {title}
+        {heading}
       </Text>
       <Text
         color="#959FA5"
@@ -26,7 +26,7 @@ function BlogInfo({ item }) {
         fontSize=" 14px"
         lineHeight=" 24px"
       >
-        {desc.shortDesc}
+        {desc}
       </Text>
     </Flex>
   );

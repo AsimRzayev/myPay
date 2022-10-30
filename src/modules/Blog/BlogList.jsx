@@ -3,7 +3,6 @@ import React from "react";
 import { generatePath } from "react-router-dom";
 
 import BlogItem from "../../components/BlogItem/BlogItem";
-import { useItem } from "../../components/BlogProvider";
 import PageContainer from "../../components/Container";
 import SectionHeading from "../../components/SectionHeading";
 import { ROUTES } from "../../routes";

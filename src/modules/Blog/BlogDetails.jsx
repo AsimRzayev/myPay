@@ -2,8 +2,6 @@ import { Image, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { useParams } from "react-router-dom";
 
-import { useItem } from "../../components/BlogProvider";
-
 function BlogDetails() {
   const blogData = useItem();
   const { id } = useParams();

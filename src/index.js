@@ -7,18 +7,23 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
 import App from "./App";
+import { ServiceProvider } from "./components/ServiceProvider";
 import reportWebVitals from "./reportWebVitals";
+import { buildServices } from "./services";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const queryClient = new QueryClient();
+const localService = buildServices();
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ChakraProvider>
-        <BrowserRouter>
-          <App />
-        </BrowserRouter>
-      </ChakraProvider>
+      <ServiceProvider services={localService}>
+        <ChakraProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </ChakraProvider>
+      </ServiceProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );
